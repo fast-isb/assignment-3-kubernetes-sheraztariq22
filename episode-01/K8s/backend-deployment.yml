@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: episode1backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: episode1backend
+  template:
+    metadata:
+      labels:
+        app: episode1backend
+    spec:
+      containers:
+        - name: episode1backend
+          image: sheraztariq22/episode1backend
+          ports:
+            - containerPort: 4000
+          resources:
+            requests:
+              memory: "256Mi" # Request 256 MB of memory
+            limits:
+              memory: "512Mi" # Limit to 512 MB of memory

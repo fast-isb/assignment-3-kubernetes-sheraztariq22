@@ -1,13 +1,15 @@
+# service.yaml
+
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-service
-  namespace: development
+  name: episode1frontend-service
 spec:
+  type: NodePort
   selector:
-    app: frontend
+    app: episode1frontend
   ports:
     - protocol: TCP
       port: 3000
       targetPort: 3000
-  type: LoadBalancer
+      nodePort: 30005
