@@ -17,7 +17,7 @@ spec:
           image: sheraztariq22/episode4frontend
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           resources:
             requests:
               memory: "256Mi" # Request 256 megabytes of memory
